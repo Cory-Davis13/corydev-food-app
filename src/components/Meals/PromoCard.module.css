@@ -1,0 +1,13 @@
+.promo-card {
+  width: 90%;
+  max-width: 45rem;
+  margin: auto;
+  background-color: rgb(85, 85, 85);
+  color: white;
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 6px 6px 9px rgb(34, 34, 34);
+  text-align: center;
+  position: relative;
+  margin-top: -10rem;
+}

@@ -1,24 +1,46 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { useState } from "react";
+import Cart from "./components/Cart/Cart";
+import Header from "./components/Layout/Header";
+import Meals from "./components/Meals/Meals";
+import CartProvider from "./store/CartProvider";
 
 function App() {
+  const [showModal, setShowModal] = useState(false);
+  const [bumpAnimation, setBumpAnimation] = useState(false);
+  const [showCheckout, setShowCheckout] = useState(false);
+
+  const handleHeaderButtonClick = () => {
+    setShowModal(true);
+  };
+
+  const handleCloseModal = () => {
+    setShowModal(false);
+    setShowCheckout(false);
+  };
+
+  const handleBumpAnimation = () => {
+    setBumpAnimation(true);
+    const resetBump = () => {
+      setBumpAnimation(false);
+    };
+    setTimeout(resetBump, 300);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <CartProvider>
+      <Header
+        handleHeaderButtonClick={handleHeaderButtonClick}
+        bumpAnimation={bumpAnimation}
+      />
+      <Meals handleBumpAnimation={handleBumpAnimation} />
+      <Cart
+        showCheckout={showCheckout}
+        closeModal={handleCloseModal}
+        showModal={showModal}
+        openCheckout={setShowCheckout}
+      />
+    </CartProvider>
   );
 }
 

@@ -1,0 +1,67 @@
+.add-btn {
+  border-radius: 25px;
+  background-color: #b94517;
+  padding: 0.25rem 2rem;
+  color: white;
+  font: inherit;
+  cursor: pointer;
+  border: none;
+  margin-top: 10px;
+}
+
+.meal {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  margin: 1rem 0;
+  border-bottom: 1px solid rgb(219, 219, 219);
+  justify-content: space-between;
+}
+
+.meal-desc {
+  font-size: smaller;
+  font-style: italic;
+  color: rgb(46, 46, 46);
+}
+
+.meal-title {
+  font-weight: 700;
+}
+
+.meal-price {
+  font-weight: 700;
+  color: rgb(192, 80, 39);
+}
+
+.meal-offering {
+  margin-bottom: 1rem;
+}
+
+.meal-offering,
+.meal-add {
+  display: flex;
+  flex-direction: column;
+}
+
+.meal-add {
+  align-items: center;
+}
+
+.meal-add input {
+  width: 35px;
+  padding: 0.25rem;
+  box-sizing: unset;
+}
+
+.meal-add label {
+  font-weight: bold;
+}
+
+ul {
+}
+
+@media only screen and (max-width: 600px) {
+  ul {
+    padding-left: 0;
+  }
+}
