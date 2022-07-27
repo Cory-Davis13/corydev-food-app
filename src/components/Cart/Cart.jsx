@@ -29,12 +29,11 @@ const Cart = (props) => {
     <Fragment>
       <Modal
         classes={styles["cart-modal"]}
-        className={styles["cart-modal"]}
         closeModal={props.closeModal}
         showModal={props.showModal}
       >
         {props.showCheckout ? (
-          <CheckoutForm />
+          <CheckoutForm closeModal={props.closeModal} />
         ) : (
           <div>
             <ul className={styles["ul-style"]}>

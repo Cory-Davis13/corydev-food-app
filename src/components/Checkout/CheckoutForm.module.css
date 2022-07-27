@@ -1,0 +1,56 @@
+.btn-submit {
+  border-radius: 25px;
+  background-color: #b94517;
+  padding: 0.25rem 2rem;
+  color: white;
+  font: inherit;
+  cursor: pointer;
+  border: none;
+  margin-top: 10px;
+}
+
+.form-field {
+  display: flex;
+}
+
+.form-error {
+  color: rgb(131, 131, 131);
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.form-input {
+  display: flex;
+  flex-direction: column;
+  margin: 0.5rem;
+}
+
+.half {
+  flex-direction: row;
+}
+
+.input-error input {
+  background-color: rgb(250, 203, 203);
+  border-color: red;
+}
+
+.meal-line {
+  display: grid;
+  grid-template-columns: 200px auto auto;
+  padding: 0.2rem 1rem;
+}
+
+.meal-list {
+  margin: 1rem 0;
+}
+
+.meal-total {
+  font-weight: bold;
+  display: flex;
+  padding-top: 1rem;
+  padding-left: 1rem;
+}
+
+input {
+  padding: 0.33rem;
+}
